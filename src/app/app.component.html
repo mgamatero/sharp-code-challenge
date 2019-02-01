@@ -1,0 +1,39 @@
+<div class="container">
+  <h1>Sharp Coding Challenge</h1>
+  <p class="lead">
+    Please refer to the README.md file for instructions.
+  </p>
+
+  <p>The starting point for your solution is provided below:</p>
+
+
+  <!-- Your family practice doctor list -->
+  <h2 class="py-4">Family Practice Doctors</h2>
+  <div class="row">
+    <ng-template ngFor let-doctor [ngForOf]="familyPracticeDoctors">
+      <div class="card col-12 col-sm-6 col-lg-4">
+        <img src="https://avatars.dicebear.com/v2/{{doctor.gender}}/{{doctor.name || 'noname'}}.svg" alt="Please replace with a meaningful alt">
+        <div>
+          <h5>Dr. {{doctor.name}}</h5>
+          <h6>{{doctor.specialty}}</h6>
+          <a href="#" class="card-link">Reviews <span class="badge badge-primary">{{doctor.reviewCount}}</span></a>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+
+  <!-- Your pediatric doctor list -->
+  <h2 class = "py-4">Pediatrics Doctors</h2>
+  <div class="row">
+    <ng-template ngFor let-doctor [ngForOf]="pediatricDoctors">
+      <div class="card col-12 col-sm-6 col-lg-4">
+        <img src="https://avatars.dicebear.com/v2/{{doctor.gender}}/{{doctor.name || 'noname'}}.svg" alt="Please replace with a meaningful alt">
+        <div>
+          <h5>Dr. {{doctor.name}}</h5>
+          <h6>{{doctor.specialty}}</h6>
+          <a href="#">Reviews <span class="badge badge-primary">{{doctor.reviewCount}}</span></a>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+</div>
